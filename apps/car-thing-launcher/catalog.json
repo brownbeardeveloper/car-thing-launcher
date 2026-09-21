@@ -1,0 +1,8 @@
+{
+  "author": "Björn Bergström",
+  "homepage": "https://github.com/brownbeardeveloper/car-thing-launcher",
+  "source": "https://github.com/brownbeardeveloper/car-thing-launcher",
+  "icon": null,
+  "screenshots": [],
+  "min_libbridgething_version": "0.12.1"
+}

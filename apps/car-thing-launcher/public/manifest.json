@@ -1,0 +1,14 @@
+{
+  "id": "01a0c41a-0baa-762b-9222-b63ec03f2123",
+  "name": "car-thing-launcher",
+  "version": "0.1.0",
+  "description": "A custom home screen.",
+  "settings": "settings.html",
+  "config": [],
+  "permissions": [],
+  "art": {
+    "heroPx": 248,
+    "thumbPx": 96
+  },
+  "role": "launcher"
+}
