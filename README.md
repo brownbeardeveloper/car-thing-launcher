@@ -1,57 +1,28 @@
-# **SOURCE_NAME**
+# Car Thing Video Launcher
 
-**SOURCE_DESCRIPTION**
+A home screen for the Spotify Car Thing that plays short videos. Turn the dial to switch videos.
 
-Webapps for the Spotify Car Thing running [bridgething](https://bridgething.com).
+## Change the videos
 
-## First run
+1. Put your videos (straight from the phone is fine) in [`apps/car-thing-launcher/videos/`](apps/car-thing-launcher/videos/).
+2. Edit titles and descriptions in [`videos.json`](apps/car-thing-launcher/videos/videos.json) in the same folder.
 
-1. Push this repo to `https://github.com/brownbeardeveloper/car-thing-launcher`.
-2. In **Settings > Pages**, set the source to **Deploy from a branch**, branch `gh-pages`, folder `/ (root)`.
+## Put it on the Car Thing
 
-The catalog is published to `https://brownbeardeveloper.github.io/car-thing-launcher/catalog.v1.json`, which can be submitted to <bridgething.com/apps>
-
-## Develop
-
-```sh
-bun run dev            # develop the app against a connected bridgething instance
-bun run dev:device     # show the dev server on the car thing screen
-bun run push           # build and install to the device
-bun run check          # ensure the catalog is valid
-```
-
-With more than one app in `apps/` your commands must specify which one: `bun run dev car-thing-launcher`.
-
-Screenshot for the store listing:
+You need: a Car Thing running [bridgething](https://bridgething.com), a USB cable, [Bun](https://bun.sh) and
+ffmpeg (`brew install ffmpeg`).
 
 ```sh
-bun run shot car-thing-launcher            # grabs what is on the screen
-bun run shot car-thing-launcher --replace  # overwrite
+bun install    # first time only
+bun run push   # every time you change something; shrinks new videos first
 ```
 
-## Add another app
+Something wrong? `bun run --cwd apps/car-thing-launcher push --release` brings back the original home screen.
+
+## Try it on your computer
 
 ```sh
-bun run new weather                 # a webapp
-bun run new dashboard --extension   # a webapp plus a desktop-side Deno process
-bun run new home --launcher         # a replacement home screen
-bun run new hud --overlay           # a system overlay drawn over every webapp
+bun run dev
 ```
 
-## Ship
-
-```sh
-bun run bump car-thing-launcher patch -m "Fix the wind direction arrow"
-git commit -am "car-thing-launcher: fix the wind direction arrow" && git push
-```
-
-Pushing to main builds the apps and regenerates the catalog.
-
-## Agent skill
-
-`.claude/skills/bridgething/` holds the `/bridgething` skill.
-
-```sh
-bun run skills           # refresh it from the published create-bridgething
-bun run skills --check   # check whether it is behind
-```
+Shift + scroll = dial · `1`–`4` = preset buttons · `Esc` = back
