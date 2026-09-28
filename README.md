@@ -17,6 +17,11 @@ bun install    # first time only
 bun run push   # every time you change something; shrinks new videos first
 ```
 
+Or use the script, which checks everything first and tells you what's missing:
+
+- **Windows:** double-click `push-windows.bat`
+- **Mac / Linux:** `./push-mac-linux.sh`
+
 Something wrong? `bun run --cwd apps/car-thing-launcher push --release` brings back the original home screen.
 
 ## Try it on your computer
