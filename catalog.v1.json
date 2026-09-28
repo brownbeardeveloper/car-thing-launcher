@@ -1,7 +1,7 @@
 {
   "$schema": "https://apps.bridgething.com/schemas/catalog/v1.json",
   "schema": "catalog.v1",
-  "updated_at": "2026-09-21T17:26:50.178Z",
+  "updated_at": "2026-09-28T16:47:19.609Z",
   "repo": {
     "name": "car-thing-launcher",
     "description": "Webapps by car-thing-launcher",
@@ -12,12 +12,25 @@
     {
       "id": "01a0c41a-0baa-762b-9222-b63ec03f2123",
       "name": "car-thing-launcher",
-      "description": "A custom home screen.",
+      "description": "A start page of short videos, played one after another with the dial.",
       "author": "Björn Bergström",
       "icon": null,
       "homepage": "https://github.com/brownbeardeveloper/car-thing-launcher",
       "source": "https://github.com/brownbeardeveloper/car-thing-launcher",
       "versions": [
+        {
+          "version": "1.0.0",
+          "released_at": "2026-09-28T16:47:19.591Z",
+          "download": {
+            "url": "https://brownbeardeveloper.github.io/car-thing-launcher/r/01a0c41a-0baa-762b-9222-b63ec03f2123/1.0.0.zip",
+            "size": 5184093,
+            "sha256": "709bac77e25c90d786eb2a63fddc6995fd75709d42e62e13ac75a3c31dab2dde"
+          },
+          "permissions": [],
+          "role": "launcher",
+          "min_libbridgething_version": "0.12.1",
+          "changelog": null
+        },
         {
           "version": "0.1.0",
           "released_at": "2026-09-21T17:26:50.139Z",
@@ -34,7 +47,7 @@
           "permissions": [],
           "role": "launcher",
           "min_libbridgething_version": "0.12.1",
-          "changelog": "First release."
+          "changelog": null
         }
       ]
     }
